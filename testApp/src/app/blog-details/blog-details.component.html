@@ -1,0 +1,25 @@
+<div class="blog-details">
+    <h2>{{ title }}</h2>
+    <!--<p><strong>Author:</strong> {{ author }}</p> -->
+    <p><strong>Date:</strong> {{ date | date: 'shortDate' }}</p>
+    <hr>
+    <!-- Blog Content with preserved newlines -->
+    <div class="blog-content">{{ content }}</div>
+
+    <h3>Comments:</h3>
+    <div *ngFor="let comment of comments; let i = index" class="comment">
+        <p>{{ comment.date | date: 'short' }}</p>
+        <p>{{ comment.text }}</p>
+        <button (click)="deleteComment(i)">Delete</button>
+        <hr>
+    </div>
+
+    <h3>Add a Comment:</h3>
+    <div class="comment-form">
+        <div class="form-group">
+            <label for="comment">Comment:</label>
+            <textarea id="comment" [(ngModel)]="newCommentText" required></textarea>
+        </div>
+    </div>
+    <button (click)="addComment()">Add Comment</button>
+</div>

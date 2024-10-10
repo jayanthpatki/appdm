@@ -1,0 +1,19 @@
+<div class="blog-list">
+  <!-- Create New Blog Button at the top-right -->
+  <div class="create-blog-container">
+    <button class="create-blog-btn" (click)="createBlog()">Create New Blog</button>
+  </div>
+
+  <h1>Blog List for User: {{ userId }}</h1>
+
+  <!-- Blog content below -->
+  <div *ngFor="let blog of blogs" class="blog-item">
+      <h3>{{ blog.title }}</h3>
+      <p>{{ blog.createdDate | date: 'short' }}</p>
+      <p>{{ blog.content }}</p>
+      
+      <!-- View Blog Button -->
+      <button class="view-blog-btn" (click)="viewBlog(blog)">View Blog</button>
+      <hr> <!-- Horizontal line break between blog items -->
+  </div>
+</div>

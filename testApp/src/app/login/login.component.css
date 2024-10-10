@@ -1,0 +1,54 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif; /* Clean font */
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.5) 25%, transparent 25%, transparent 50%, rgba(0, 255, 255, 0.5) 50%, rgba(0, 255, 255, 0.5) 75%, transparent 75%, transparent); /* Diagonal stripes */
+  background-size: 20px 20px; /* Size of the stripes */
+  color: #333; /* Dark text for contrast */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Login Component Styles */
+.login-container {
+  max-width: 400px; /* Max width for the login form */
+  margin: auto; /* Center the form horizontally */
+  padding: 20px; /* Padding inside the form */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: rgba(224, 255, 255, 0.9); /* Very light cyan blue with slight transparency */
+  position: absolute; /* Absolute positioning for centering */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Translate to perfectly center */
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding inside text boxes */
+  margin: 10px 0; /* Vertical spacing between elements */
+  border: 1px solid #004d99; /* Capgemini blue border */
+  border-radius: 5px; /* Rounded corners for inputs */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+button {
+  background-color: #004d99; /* Capgemini blue for buttons */
+  color: white; /* White text on buttons */
+  padding: 10px 15px; /* Padding for buttons */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners for buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  display: block; /* Block display for centering */
+  margin: 20px auto; /* Center button with auto margins */
+}
+
+button:hover {
+  background-color: #003366; /* Darker blue on hover */
+}
+
+.error {
+  color: red; /* Red color for error messages */
+  text-align: center; /* Center align error messages */
+}
